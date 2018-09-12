@@ -5,14 +5,14 @@
     Author URL: https://bootstrapmade.com
 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
 p {
   line-height: 1.55;
   color: #333;
   font-size: 400;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin-bottom: 65px;
+  margin-bottom: 50px;
 }
 
 h3 {
@@ -30,6 +30,7 @@ h3 {
 
 h4 {
   font-size: 18px;
+  margin-bottom: 30px;  
 }
 
 /* ==================================================
@@ -564,6 +565,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #999;
 }
 
+
+
 /* ==================================================
   Call-to-action Styling
   ================================================== */
@@ -587,7 +590,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .cta .btn-ghost {
-  position: relative;
+  position: static;
   top: 13px;
 }
 
@@ -597,15 +600,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 .portfolio {
   background-color: #edf6ff;
   padding-bottom: 0;
+  padding-top: 0;
 }
 
 .portfolio h2 {
   color: #193D6B;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 .portfolio-grid {
-  margin-top: 65px;
+  margin-top: 0px;
 }
 
 .portfolio-grid .row {
@@ -618,6 +622,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .portfolio-grid .row > div .card img {
   width: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 600px;
+}
+
+.carousel-inner{
+ height: 550px;
 }
 
 .portfolio-grid .row > div .card .portfolio-over {

@@ -35,6 +35,9 @@ $(document).ready(function() {
     speed: 400
   });
 
+  $('.carousel').carousel({
+  interval: 2000
+})
   // Mobile Navigation
   if( $('#nav-menu-container').length ) {
       var $mobile_nav = $('#nav-menu-container').clone().prop({ id: 'mobile-nav'});
