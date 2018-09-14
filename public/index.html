@@ -49,6 +49,21 @@
   <!-- Page Content
     ================================================== -->
   <!-- Hero -->
+  <script src="js/contacto.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Set the configuration for your app
+    // TODO: Replace with your project's config object
+    var config = {
+    apiKey: "AIzaSyAgMC-WFoyl1yo2aV44_xg13i_1TGNu1w0",
+    authDomain: "tecnosillas-ff39b.firebaseapp.com",
+    databaseURL: "https://tecnosillas-ff39b.firebaseio.com",
+    storageBucket: "bucket.appspot.com"
+    };
+    var app = firebase.initializeApp(config); 
+    var storage = app.storage() 
+    var database = app.database()
+  </script>
 
   <section class="hero" id="inicio">
     <div class="container text-center">
@@ -354,6 +369,7 @@
           <h1 class="section-title">Hagamos una cita</h1>
           
           <br>
+          <p>Para nosotros es muy importante atender a nuestros clientes personalmente para poder resolver todas sus dudas  </p>
         </div>
       </div>
 
@@ -393,55 +409,46 @@
         </div>
 
         <div class="col-lg-5 col-md-8">
-            <br>
-            
-            <p>Para nosotros es muy importante atender a nuestros clientes personalmente para poder resolver todas sus dudas  </p>
+          <br>
+          <br>
+          <br>
           <div class="form">
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <!--form action="" method="post" role="form" class="contactForm"-->
+              <div class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Empresa / Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="contactFormName" placeholder="Empresa / Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                  <select class="form-control" id="exampleFormControlSelect1" placeholder="Empresa / Particular">
+                </div>
+                <div class="form-group">
+                  <select class="form-control" id="FormControlSelectType" placeholder="Empresa / Particular">
                    <option>Empresa</option>
                    <option>Particular</option>
                   </select>
-               </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                </div>
+                <div class="form-group">
+                <input type="email" class="form-control" name="email" id="contactFormEmail" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Teléfono" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                </div>
+                <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="contactFormSubject" placeholder="Teléfono" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="4" data-rule="required" data-msg="Please write something for us" placeholder="Esccribe tu mensaje aqui..."></textarea>
+                </div>
+                <div class="form-group">
+                <textarea class="form-control" id="contactFormMessage" name="message" rows="4" data-rule="required" data-msg="Please write something for us" placeholder="Esccribe tu mensaje aqui..."></textarea>
                 <div class="validation"></div>
+                </div>
+                <label>Mejor horario de contacto</label>
+                <select class="form-control" name="" id="contactFormTime">
+                <option value="8:00 am - 1:00 pm">Todo el dia</option>
+                <option value="8:00 am - 1:00 pm">8:00 am - 1:00 pm</option>
+                <option value="2:00 pm a 6:00 pm">2:00 pm a 6:00 pm</option>
+                </select>
+                <br>
+                <div class="text-center"><button type="submit" id="contactFormSubmitButton">Enviar mensaje</button></div>
               </div>
-              <label>Mejor horario de contacto</label>
-              <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
-                    <label class="custom-control-label" for="defaultGroupExample1">8:00 am - 1:00 pm</label>
-              </div>
-
-              <!-- Group of default radios - option 2 -->
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
-                  <label class="custom-control-label" for="defaultGroupExample2">2:00 pm a 6:00 pm</label>
-              </div>
-
-<!-- Group of default radios - option 3 -->
-             <div class="custom-control custom-radio">
-               <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios">
-               <label class="custom-control-label" for="defaultGroupExample3">Todo el dia</label>
-             </div>
-             <br>
-              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
-            </form>
+            <!--/form-->
           </div>
         </div>
 
